@@ -1,0 +1,76 @@
+body{
+    font-family: "Baloo Tammudu 2", sans-serif;
+    text-align: center;
+    background-color:#f2e9de;
+    color: #31748f ; 
+}
+header{
+    background-color:#31748f;
+    color: #f2e9de ; 
+    padding-top: 1em;
+}
+.nav_ul{
+    display: flex;
+    list-style-type: none; 
+    justify-content: flex-end;
+}
+.about, .docs{
+    padding: 1px 10px;
+    margin: 1px 10px;
+}
+.aside_ul{
+    list-style-type: square; 
+    text-align: left;
+}
+button{
+    padding: 1em;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: 2em;
+    color:#faf4ed;
+    border: none;
+    border-radius: 0.5em;
+}
+.new, .save{
+    background-color:#3e8fb0; ;
+}
+.dark{
+    background-color:#59546d; ;
+}
+.cancel{
+    background-color:#b4637a; ;
+}
+p{
+    font-size: 2rem;
+}
+@media screen and (min-width:600px){
+body{
+    display: grid;
+    grid-template-columns: 350px 4fr;
+    grid-template-rows: repeat(1fr, 6);
+    height: 100vh;
+}
+header{
+    background-color:#f2e9de;
+    color: #31748f ; 
+}
+aside{
+    background-color:#31748f;
+    color:  #f2e9de;
+}
+h1{
+    grid-column: 2/3;
+    grid-row: 1/2; 
+}
+aside{
+    grid-column: 1/2;
+    grid-row: 1/7;
+}
+footer{
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+
+
+
+}
