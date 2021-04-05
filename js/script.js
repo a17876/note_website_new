@@ -1,24 +1,32 @@
 //- Button click function
 function button(){
-    using toggle, return true when the button is clicked 
+    using toggle, 
+    return true when the button is clicked 
 }
 
 //- Dark Theme
 function darkTheme(){
     if (dark_theme button function === True){
         when Button function return true, 
-        change main and sidebar - background color and font color, 
-        change buttons' background color and font color, value to "Light Theme",
+        change main background color, 
+        change main color, 
+        change sidebar background color, 
+        change sidebar color, 
+        change buttons background color, 
+        change buttons color, 
+        change buttons value to "Light Theme",
 }
+
 // - Cancel
 function cancel(){
     if (cancel button function === True){
-        hide textarea, save and cancel button
+        hide textarea 
+        hide save button
+        hide cancel button 
     }
 }
 
 // - declare array
-
 let noteArray = {title:"note one", body:"this is my first note"}
 
 // - Save
@@ -29,10 +37,20 @@ function save(){
         add a list item to the sidebar
     }
 }
+// - New Note
+function newNote(){
+    make visible - hidden textarea 
+    make visible - buttons 
+    if (click again){
+        clear the textarea
+    }
+}
+
 // - list of sidebar
 function display(){
     if (a list of title in the side bar is clicked){
         search the title in the Array(using loop)
-        display the title and text contents
+        display the title
+        display the text contents
     }
 }
