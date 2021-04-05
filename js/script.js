@@ -49,7 +49,7 @@ function newNote(){
 // - list of sidebar
 function display(){
     if (a list of title in the side bar is clicked){
-        search the title in the Array(using loop)
+        search the title in the Array of "title"(using loop)
         display the title
         display the text contents
     }
