@@ -48,6 +48,7 @@ button{
 .dark{
     background-color:#59546d; 
 }
+
 .cancel{
     background-color:#b4637a; 
 }
@@ -72,6 +73,17 @@ p{
     font-family: "Baloo Tammudu 2", sans-serif;
     color: #59546d;
     border-color: #31748f;
+}
+.dark_mode1{
+    background-color: #393552;
+    color: #fffaf3; 
+}
+.dark_mode2{
+    background-color: #191724;
+    color: #fffaf3; 
+}
+.dark_mode3{
+    content: "Light Theme";
 }
 
 @media screen and (min-width:600px){

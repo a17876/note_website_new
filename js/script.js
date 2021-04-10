@@ -1,16 +1,27 @@
 const darkButton = document.querySelector(".dark");
 
-function darkTheme(){
-    document.body.style.backgroundColor = "#191724";
-    document.querySelector('header').style.backgroundColor = "#191724";
-    document.querySelector('header').style.color = "#e0def4";
-    document.querySelector('footer').style.color = "#e0def4";
-    document.querySelector('aside').style.backgroundColor = "#1f1d2e";
-    document.querySelector('textarea').style.backgroundColor = "#1f1d2e";
-    document.querySelector('textarea').style.color = "#e0def4";
+
+
+
+function changeBG() {
+    document.querySelector(".dark").classList.toggle("dark_mode1");
+    document.querySelector(".cancel").classList.toggle("dark_mode1");
+    document.querySelector(".save").classList.toggle("dark_mode1");
+    document.querySelector(".new").classList.toggle("dark_mode1");
+    document.querySelector(".body").classList.toggle("dark_mode2");
+    document.querySelector(".textarea").classList.toggle("dark_mode1");
+    document.querySelector(".aside").classList.toggle("dark_mode1");
+    document.querySelector(".header").classList.toggle("dark_mode2");
+    if (darkButton.innerHTML === "Light Theme"){
+        darkButton.innerHTML = "Dark Theme"
+    } else {
+        darkButton.innerHTML = "Light Theme"
+    }
 }
 
-darkButton.addEventListener("click", darkTheme);
+darkButton.addEventListener("click", changeBG);
+
+
 
 
 
