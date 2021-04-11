@@ -31,7 +31,7 @@ footer{
     padding: 1px 10px;
     margin: 1px 10px;
 }
-.aside_ul{
+.lst{
     list-style-type: square; 
     text-align: left;
 }
@@ -84,6 +84,9 @@ p{
 }
 .dark_mode3{
     content: "Light Theme";
+}
+.hidden{
+    visibility:hidden;
 }
 
 @media screen and (min-width:600px){

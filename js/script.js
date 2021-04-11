@@ -1,17 +1,19 @@
 const darkButton = document.querySelector(".dark");
-
-
-
+const cancelButton = document.querySelector(".cancel");
+const newButton = document.querySelector(".new");
+const saveButton = document.querySelector(".save");
+const notesArray = [{title:"note one", body:"this is my first note"}];
 
 function changeBG() {
     document.querySelector(".dark").classList.toggle("dark_mode1");
     document.querySelector(".cancel").classList.toggle("dark_mode1");
     document.querySelector(".save").classList.toggle("dark_mode1");
     document.querySelector(".new").classList.toggle("dark_mode1");
-    document.querySelector(".body").classList.toggle("dark_mode2");
     document.querySelector(".textarea").classList.toggle("dark_mode1");
     document.querySelector(".aside").classList.toggle("dark_mode1");
+    document.querySelector(".body").classList.toggle("dark_mode2");
     document.querySelector(".header").classList.toggle("dark_mode2");
+
     if (darkButton.innerHTML === "Light Theme"){
         darkButton.innerHTML = "Dark Theme"
     } else {
@@ -19,71 +21,48 @@ function changeBG() {
     }
 }
 
+let textareaVisible = true;
+function hide() {
+    document.querySelector(".cancel").style.visibility = "hidden";
+    document.querySelector(".textarea").style.visibility = "hidden";
+    document.querySelector(".save").style.visibility = "hidden";
+    textareaVisible = false;
+}
+
+function newNote() {
+    if (textareaVisible === false)
+    {
+        document.querySelector(".cancel").style.visibility = "visible";
+        document.querySelector(".textarea").style.visibility = "visible";
+        document.querySelector(".save").style.visibility = "visible";
+    } else
+    {
+        document.querySelector(".textarea").value="";
+    }
+}
+
+function addList(){
+    userTitle = prompt("Enter the title of your note: ")
+    userContent = document.getElementById("content").value;
+    notesArray.push({title:`${userTitle}`, body:`${userContent}`})
+
+    const list = document.querySelector(".lst");
+    let elem = document.createElement("li");
+    let text = document.createTextNode(userTitle);
+    elem.appendChild(text);
+    list.appendChild(elem);
+}
+
+
 darkButton.addEventListener("click", changeBG);
+cancelButton.addEventListener("click", hide);
+newButton.addEventListener("click", newNote);
+saveButton.addEventListener("click", addList);
+
+const cancelButton = document.querySelector(".cancel");
 
 
 
 
 
 
-
-
-
-
-
-// //- Button click function
-// function button(){
-//     using toggle, 
-//     return true when the button is clicked 
-// }
-
-// //- Dark Theme
-// function darkTheme(){
-//     if (dark_theme button function === True){
-//         when Button function return true, 
-//         change main background color, 
-//         change main color, 
-//         change sidebar background color, 
-//         change sidebar color, 
-//         change buttons background color, 
-//         change buttons color, 
-//         change buttons value to "Light Theme",
-// }
-
-// // - Cancel
-// function cancel(){
-//     if (cancel button function === True){
-//         hide textarea 
-//         hide save button
-//         hide cancel button 
-//     }
-// }
-
-// // - declare array
-// let noteArray = {title:"note one", body:"this is my first note"}
-
-// // - Save
-// function save(){
-//     if (save button function === True){
-//         alert - ask the title of the note
-//         add the title and contents to the note Array
-//         add a list item to the sidebar
-//     }
-// }
-// // - New Note
-// function newNote(){
-//     make visible - hidden textarea 
-//     make visible - buttons 
-//     if (click again){
-//         clear the textarea
-//     }
-// }
-
-// // - list of sidebar
-// function display(){
-//     if (a list of title in the side bar is clicked){
-//         search the title in the Array of "title"(using loop)
-//         display the title
-//         display the text contents
-//     }
-// }
