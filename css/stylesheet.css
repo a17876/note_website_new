@@ -42,6 +42,9 @@ button{
     border: none;
     border-radius: 0.5em;
 }
+li{
+    cursor: pointer;
+}
 .new,.save{
     background-color:#3e8fb0; 
 }
@@ -87,6 +90,9 @@ p{
 }
 .hidden{
     visibility:hidden;
+}
+.checked{
+    background-color: brown;
 }
 
 @media screen and (min-width:600px){

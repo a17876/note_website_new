@@ -51,6 +51,7 @@ function addList(){
     let text = document.createTextNode(userTitle);
     elem.appendChild(text);
     list.appendChild(elem);
+    elem.addEventListener("click", diaplayContent);
 }
 
 
@@ -59,10 +60,14 @@ cancelButton.addEventListener("click", hide);
 newButton.addEventListener("click", newNote);
 saveButton.addEventListener("click", addList);
 
-const cancelButton = document.querySelector(".cancel");
 
-
-
-
-
-
+function diaplayContent(event)
+{
+    noteTitle = event.target.textContent;
+    console.log(noteTitle)
+    for (let i = 0; i < 3; ++i){
+        if (notesArray[i].title.includes(noteTitle)) {
+          console.log(`${notesArray[i].body}`);
+        }
+    }
+}
