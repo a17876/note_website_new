@@ -4,7 +4,7 @@ const newButton = document.querySelector(".new");
 const saveButton = document.querySelector(".save");
 const list = document.querySelector(".lst"); 
   
-var notesArray = [{title:"note one", body:"this is my first note"}];
+const notesArray = [{title:"note one", body:"this is my first note"}];
 
 function changeBG() {
     darkButton.classList.toggle("dark_mode4");
@@ -16,7 +16,8 @@ function changeBG() {
     document.querySelector(".body").classList.toggle("dark_mode2");
     document.querySelector(".header").classList.toggle("dark_mode2");
 
-    if (darkButton.innerHTML === "Light Theme"){
+    if (darkButton.innerHTML === "Light Theme")
+    {
         darkButton.innerHTML = "Dark Theme"
     } else {
         darkButton.innerHTML = "Light Theme"
@@ -31,7 +32,8 @@ function hide() {
     textareaVisible = false;
 }
 
-function newNote() {
+function newNote() 
+{
     console.log(textareaVisible)   
     if (textareaVisible === false)
     {
@@ -44,8 +46,6 @@ function newNote() {
         document.querySelector(".textarea").value="";
     }
 }
-
-
 
 function addList()
 {
@@ -71,7 +71,6 @@ function diaplayContent(event)
             displayArea.value = noteContent
         }
     }
-    
 }
 
 darkButton.addEventListener("click", changeBG);
