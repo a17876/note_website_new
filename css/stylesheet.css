@@ -78,15 +78,19 @@ p{
     border-color: #31748f;
 }
 .dark_mode1{
-    background-color: #393552;
+    background-color: #232136;
     color: #fffaf3; 
 }
 .dark_mode2{
-    background-color: #191724;
+    background-color: #1f1d2e;
     color: #fffaf3; 
 }
 .dark_mode3{
     content: "Light Theme";
+}
+.dark_mode4{
+    background-color: #575279;
+    color: #fffaf3; 
 }
 .hidden{
     visibility:hidden;
