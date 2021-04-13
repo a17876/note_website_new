@@ -33,8 +33,7 @@ function hide() {
 }
 
 function newNote() 
-{
-    console.log(textareaVisible)   
+{ 
     if (textareaVisible === false)
     {
         cancelButton.style.visibility = "visible";
@@ -61,12 +60,10 @@ function addList()
 function diaplayContent(event)
 {
     noteTitle = event.target.textContent;     
-    console.log(noteTitle)
     
     for (let i = 0; i < notesArray.length; ++i){
         if (notesArray[i].title === noteTitle) {
             let noteContent = notesArray[i].body;
-            console.log(noteContent)
             const displayArea = document.getElementById("content");
             displayArea.value = noteContent
         }
